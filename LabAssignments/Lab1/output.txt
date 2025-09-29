@@ -1,0 +1,8 @@
+Script started on 2025-09-29 17:02:18+00:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="176" LINES="17"]
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ [7m./a.out[27m./a.out
+[?2004lEnter the radius of a sphere: 3
+The sphere's volume is: 113.097
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ [?2004l
+exit
+
+Script done on 2025-09-29 17:02:26+00:00 [COMMAND_EXIT_CODE="0"]
