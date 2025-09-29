@@ -1,8 +1,30 @@
-Script started on 2025-09-29 17:02:18+00:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="176" LINES="17"]
-[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ [7m./a.out[27m./a.out
-[?2004lEnter the radius of a sphere: 3
-The sphere's volume is: 113.097
+Script started on 2025-09-29 17:04:10+00:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="176" LINES="17"]
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ ./a.out
+[?2004lEnter the radius of a sphere: 2
+The sphere's volume is: 33.5103
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ ./a.out
+[?2004lEnter the radius of a sphere: 4
+The sphere's volume is: 268.083
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ ./a.out6
+[?2004lbash: ./a.out6: No such file or directory
+[?2004h[0;32m@DineshSunny [1;31m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ ./a.out6
+[?2004lbash: ./a.out6: No such file or directory
+[?2004h[0;32m@DineshSunny [1;31m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ ./a.out6[K
+[?2004lEnter the radius of a sphere: 234
+The sphere's volume is: 5.36706e+07
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ ./a.out
+[?2004lEnter the radius of a sphere: 454.5
+The sphere's volume is: 3.9327e+08
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ ./a.out
+[?2004lEnter the radius of a sphere: 0
+The sphere's volume is: 0
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ -34[K[K[K./a.out
+[?2004lEnter the radius of a sphere: -*/3244
+The sphere's volume is: 0
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ ./a.out
+[?2004lEnter the radius of a sphere: */*
+The sphere's volume is: 0
 [?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab1 [0;36m([1;31mmain[0;36m) [0m$ [?2004l
 exit
 
-Script done on 2025-09-29 17:02:26+00:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2025-09-29 17:05:09+00:00 [COMMAND_EXIT_CODE="0"]
