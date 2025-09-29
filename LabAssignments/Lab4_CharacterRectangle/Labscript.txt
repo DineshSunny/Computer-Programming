@@ -1,0 +1,38 @@
+Script started on 2025-09-29 17:32:25+00:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="176" LINES="18"]
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab4_CharacterRectangle [0;36m([1;31mmain[0;36m) [0m$ ./a.out
+[?2004lEnter the input file name: data1.txt
+Enter the output file name: oi utput.txt
+Pattern written to output.txt
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab4_CharacterRectangle [0;36m([1;31mmain[0;36m) [0m$ cat data1.txt
+[?2004l4 6 *
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab4_CharacterRectangle [0;36m([1;31mmain[0;36m) [0m$ cat outpi[Kut.txt
+[?2004l******
+******
+******
+******
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab4_CharacterRectangle [0;36m([1;31mmain[0;36m) [0m$ cat output.txt[1Pdata1.txt[6P./a.out
+[?2004lEnter the input file name: data2.txt
+Enter the output file name: output.txt
+Pattern written to output.txt
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab4_CharacterRectangle [0;36m([1;31mmain[0;36m) [0m$ cat [K[K [Kt data1[K2.,[Ktt[Kxt
+[?2004l3 8 #
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab4_CharacterRectangle [0;36m([1;31mmain[0;36m) [0m$ cat output.txt
+[?2004l########
+########
+########
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab4_CharacterRectangle [0;36m([1;31mmain[0;36m) [0m$ cat output.txt[1Pdata2.txt[6P./a.out
+[?2004lEnter the input file name: data3.txt
+Enter the output file name: output.txt
+Pattern written to output.txt
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab4_CharacterRectangle [0;36m([1;31mmain[0;36m) [0m$ cat Dat[K[K[Kdata3.txt
+[?2004l5 5 @
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab4_CharacterRectangle [0;36m([1;31mmain[0;36m) [0m$ cat O[Koutput.txt
+[?2004l@@@@@
+@@@@@
+@@@@@
+@@@@@
+@@@@@
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab4_CharacterRectangle [0;36m([1;31mmain[0;36m) [0m$ [?2004l
+exit
+
+Script done on 2025-09-29 17:34:17+00:00 [COMMAND_EXIT_CODE="0"]
