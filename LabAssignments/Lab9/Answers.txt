@@ -1,0 +1,189 @@
+📄 Answers.txt (Lab 9 – Question 3)
+
+Name: Dinesh Seveti
+Course: CSCI 201
+Lab 9 – Classes in C++
+Question 3: Splitting into Multiple Files
+
+1. Purpose of Question 3
+
+In earlier labs, our calculator was implemented in a single file. While this works for small programs, it becomes very hard to manage in larger projects.
+
+Question 3 asks us to split the program into three separate files:
+
+Header file (Calculator.h) – contains the class declaration.
+
+Implementation file (Calculator.cpp) – contains the function definitions.
+
+Driver file (main.cpp) – contains the main() function that runs the program.
+
+This separation introduces us to modular programming, which is how real-world C++ software is structured.
+
+2. Why Split into Three Files?
+
+Splitting into multiple files has several important benefits:
+
+Organization & Readability:
+Each file has a clear purpose. Class declarations go in the header, while logic is separated into the implementation file. This keeps the codebase neat and easy to read.
+
+Reusability:
+A header file (like Calculator.h) can be included in multiple projects. For example, we could reuse the calculator in another assignment simply by linking its .h and .cpp files.
+
+Maintainability:
+If you need to change the implementation of Calculator, you only edit Calculator.cpp. The header file and main program don’t need to change.
+
+Compilation Efficiency:
+Only files that change need to be recompiled. This is very important in larger projects with hundreds of files.
+
+This structure is the standard practice in C++ development, so this lab prepares us for real-world coding.
+
+3. File Responsibilities
+
+Here’s what each file does in Question 3:
+
+📄 Calculator.h
+
+Declares the Calculator class.
+
+Contains member variables: operand1, operand2, op, and result.
+
+Declares public methods:
+
+Calculator() (constructor).
+
+void run(istream &in) → reads input and performs calculation.
+
+void printResult() → displays result.
+
+📄 Calculator.cpp
+
+Implements the methods declared in Calculator.h.
+
+The constructor initializes operands to 0 and the operator to '+'.
+
+The run() method reads two operands and an operator, then performs the calculation (+ or -).
+
+The printResult() method outputs the final result.
+
+📄 main.cpp
+
+Provides the entry point of the program.
+
+Asks the user whether they want to use keyboard input or file input.
+
+If file input is chosen, it opens input.txt and passes it to run().
+
+Calls printResult() to display results.
+
+4. Example Code Explanation
+
+Calculator.h
+
+#ifndef CALCULATOR_H
+#define CALCULATOR_H
+
+#include <iostream>
+using namespace std;
+
+class Calculator {
+private:
+    double operand1, operand2, result;
+    char op;
+
+public:
+    Calculator();                // Constructor
+    void run(istream &in);       // Perform calculation from input stream
+    void printResult();          // Print the result
+};
+
+#endif
+
+
+👉 This file only declares the class. No implementation here.
+
+Calculator.cpp
+
+#include "Calculator.h"
+
+Calculator::Calculator() : operand1(0), operand2(0), result(0), op('+') {}
+
+void Calculator::run(istream &in) {
+    in >> operand1 >> operand2 >> op;
+    if (op == '+')
+        result = operand1 + operand2;
+    else if (op == '-')
+        result = operand1 - operand2;
+    else
+        cout << "Unsupported operator." << endl;
+}
+
+void Calculator::printResult() {
+    cout << "Result: " << result << endl;
+}
+
+
+👉 This file implements the methods declared in the header.
+
+The constructor initializes variables.
+
+The run() method reads data from either keyboard or file.
+
+The printResult() method prints the outcome.
+
+main.cpp
+
+#include "Calculator.h"
+#include <fstream>
+
+int main() {
+    Calculator calc;
+    char choice;
+
+    cout << "Read input from file (f) or keyboard (k)? ";
+    cin >> choice;
+
+    if (choice == 'f') {
+        ifstream fin("input.txt");
+        if (!fin) {
+            cerr << "Error opening input.txt" << endl;
+            return 1;
+        }
+        while (fin.peek() != EOF) {   // Process multiple lines
+            calc.run(fin);
+            calc.printResult();
+        }
+    } else {
+        cout << "Enter two numbers and an operator (+ or -): ";
+        calc.run(cin);
+        calc.printResult();
+    }
+
+    return 0;
+}
+
+
+👉 This is the driver program.
+
+It chooses the input source (file or keyboard).
+
+It passes the stream (cin or ifstream) to the calculator.
+
+If file input is chosen, it loops through all lines in input.txt so multiple expressions can be evaluated in one run.
+
+5. Example Script Session
+@dinesh ➜  ~/lab9_q3 $ g++ main.cpp Calculator.cpp -o CalculatorApp
+@dinesh ➜  ~/lab9_q3 $ ./CalculatorApp
+Read input from file (f) or keyboard (k)? k
+Enter two numbers and an operator (+ or -): 8 9 +
+Result: 17
+
+@dinesh ➜  ~/lab9_q3 $ ./CalculatorApp
+Read input from file (f) or keyboard (k)? f
+Result: 16
+Result: 8
+Result: 300
+Result: 25
+Result: 17
+
+
+✔ Demonstrates both keyboard and file input.
