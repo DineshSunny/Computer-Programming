@@ -1,40 +1,22 @@
-Script started on 2024-04-16 05:52:30+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="218" LINES="15"]
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/lab-7-am9663gn [0;36m([1;31mmain[0;36m) [0m$ g++ MainR[K[K[K[K[Kmaion[K[KnReadSorted.cpp
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/lab-7-am9663gn [0;36m([1;31mmain[0;36m) [0m$ g++ mainReadSorted.cpp[K\[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K./a.out
-Enter the name of input file: ^[[A    input.txt
+Script started on 2024-04-16 06:15:00+00:00 [TERM="xterm-256color" TTY="/dev/pts/1"]
 
-1.4 3.2 5.6 7.85 10.2 11.3 12.7 13.2 13.23 14.7 17.7 19.75 20.22 21.43 22.98 34.67 65.44 90.01 90.022 100.01 
-
-1.4 3.2 5.6 7.85 10.2 11.3 12.7 13.2 13.23 14.7 17.7 19.75 20.22 21.43 22.98 34.67 65.44 90.01 90.022 100.01 103.45 104.77 105.43 106.27 107.83 108.24 109.82 115.6 117 120.13 
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/lab-7-am9663gn [0;36m([1;31mmain[0;36m) [0m$ ./a.outg++ mainReadSorted.cpp
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/lab-7-am9663gn [0;36m([1;31mmain[0;36m) [0m$ g++ mainReadSorted.cpp./a.out[K
-Enter the name of input file: ^[[A^[[A        input.txt
-
-File is empty!
-
-File is empty!
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/lab-7-am9663gn [0;36m([1;31mmain[0;36m) [0m$ ./a.outg++ mainReadSorted.cpp
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/lab-7-am9663gn [0;36m([1;31mmain[0;36m) [0m$ g++ mainReadSorted.cpp./a.out[K
+@dinesh ➜  ~/lab7 $ g++ mainReadSorted.cpp -o lab7
+@dinesh ➜  ~/lab7 $ ./lab7
 Enter the name of input file: input.txt
+Array 1 contents: 1.4 3.2 5.6 7.85 10.2 11.3 12.7 13.2 13.23 14.7 17.7 19.75 20.22 21.43 22.98 34.67 65.44 90.01 
 
-1.4 3.2 5.6 7.85 10.2 11.3 12.7 13.2 13.23 14.7 17.7 19.75 20.22 21.43 22.98 34.67 65.44 90.01 90.022 100.01 
+Array 2 contents: 1.4 3.2 5.6 7.85 10.2 11.3 12.7 13.2 13.23 14.7 17.7 19.75 20.22 21.43 22.98 34.67 65.44 90.01 90.022 100.01 103.45 104.77 105.43 106.27 107.83 108.24 109.82 115.6 117 120.13 
 
-1.4 3.2 5.6 7.85 10.2 11.3 12.7 13.2 13.23 14.7 17.7 19.75 20.22 21.43 22.98 34.67 65.44 90.01 90.022 100.01 
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/lab-7-am9663gn [0;36m([1;31mmain[0;36m) [0m$ ./a.outg++ mainReadSorted.cpp
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/lab-7-am9663gn [0;36m([1;31mmain[0;36m) [0m$ g++ mainReadSorted.cpp./a.out[K
-Enter the name of input file: input.txt
-
-1.4 3.2 5.6 7.85 10.2 11.3 12.7 13.2 13.23 14.7 17.7 19.75 20.22 21.43 22.98 34.67 65.44 90.01 
-
-1.4 3.2 5.6 7.85 10.2 11.3 12.7 13.2 13.23 14.7 17.7 19.75 20.22 21.43 22.98 34.67 65.44 90.01 
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/lab-7-am9663gn [0;36m([1;31mmain[0;36m) [0m$ ./a.outg++ mainReadSorted.cpp
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/lab-7-am9663gn [0;36m([1;31mmain[0;36m) [0m$ g++ mainReadSorted.cpp./a.out[K
-Enter the name of input file: input.txt
-
+@dinesh ➜  ~/lab7 $ ./lab7
+Enter the name of input file: unsorted.txt
 Error! The file was not sorted!
 
 Error! The file was not sorted!
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/lab-7-am9663gn [0;36m([1;31mmain[0;36m) [0m$ exit
-exit
 
-Script done on 2024-04-16 05:54:34+00:00 [COMMAND_EXIT_CODE="0"]
+@dinesh ➜  ~/lab7 $ ./lab7
+Enter the name of input file: empty.txt
+File is empty!
+File is empty!
+
+@dinesh ➜  ~/lab7 $ exit
+Script done on 2024-04-16 06:20:00+00:00 [COMMAND_EXIT_CODE="0"]
