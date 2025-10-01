@@ -1,0 +1,18 @@
+Implementation of the function readSortedArray in C++:
+
+
+int readSortedArray(std::ifstream& input, float* arr, int arrSize) {
+    // Read the first item outside the loop
+    input >> arr[0];
+    if (input.fail()) {
+        return 0;
+    }
+    int i = 1; // Start reading from the second item
+    while (i < arrSize && input >> arr[i]) {
+        if (arr[i] < arr[i-1]) {
+            return -1; // Array is not sorted
+        }
+        i++;
+    }
+    return i; // Return the number of items read
+}

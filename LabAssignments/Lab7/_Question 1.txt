@@ -1,0 +1,18 @@
+Question 1:
+
+The parameters that will specify the array and the input filestream are:
+
+An input file stream object, to read the data from the input file
+
+An array of float values, to store the data read from the input file
+
+The header for the function readSortedArray will be:
+
+int readSortedArray(ifstream& in, float arr[], int size)
+where
+
+"in" is the input file stream object
+
+"arr" is the array of float values to store the data read from the input file
+
+"size" is the size of the array

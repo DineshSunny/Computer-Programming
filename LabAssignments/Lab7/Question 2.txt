@@ -1,0 +1,14 @@
+//Loop to read the data into the array:
+
+// Read the first item outside the loop
+in >> arr[0];
+int i = 1; // initialize loop counter
+while (i < size && in >> arr[i]) {
+    // check if the array is sorted
+    if (arr[i] < arr[i-1]) {
+        return -1;
+    }
+    i++;
+}
+// return the number of items that were read
+return i
