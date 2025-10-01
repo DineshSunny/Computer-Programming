@@ -1,0 +1,19 @@
+Script started on 2024-04-16 05:27:32+00:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="218" LINES="15"]
+[0;32m@am9663gn [0m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ exitg++ code.cpp
+[0;32m@am9663gn [0m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ g++ code.cpp[8Pexit[K[K[K[K23
+bash: 23: command not found
+[0;32m@am9663gn [1;31m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ 23g++ code.cpp[8Pexitg++ code.cpp
+[0;32m@am9663gn [0m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ g++ code.cpp[Kg++ code.cpp23[Kg++ code.cpp[8Pexitg++ code.cpp[5P./a.outg++ code.cpp[5P./a.out
+Pleas enter a number for which a matching sum is needed: 23
+
+Item 4 (with value 7 ) and item 7 (with value 16 add upto 23
+58 array items were accessed
+[0;32m@am9663gn [0m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ ./a.outg++ code.cpp[5P./a.out
+Pleas enter a number for which a matching sum is needed: ^[[A^[[A        35
+
+No matching sum is found
+72 array items were accessed
+[0;32m@am9663gn [0m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ exit
+exit
+
+Script done on 2024-04-16 05:28:01+00:00 [COMMAND_EXIT_CODE="0"]

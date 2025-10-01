@@ -1,0 +1,17 @@
+Initialize a counter for array access operations.
+
+Read integers from the file and store them in a non-decreasing order in the array.
+
+Prompt the user to input a number for which a matching sum is needed.
+
+Implement nested loops to iterate over the array elements, checking all pairs (A[i], A[j]).
+
+Inside the nested loops, for each pair, compare the sum A[i] + A[j] with the user-input number.
+
+If a matching sum is found, print the indices i and j, along with the values A[i] and A[j].
+
+Print the total count of array access operations.
+
+If no matching sum is found after iterating through all pairs, report failure and print the total count of array access operations.
+
+Terminate the program after reporting the results.

@@ -1,0 +1,225 @@
+Name: Dinesh Seveti
+Course: CSCI 201
+Lab 8 – Matching Sum Problem (Brute-Force Approach)
+
+Q1: Order of Pairs Checked
+
+The algorithm must check all possible distinct pairs (A[i], A[j]) where i < j. The checking order is:
+
+First fix i = 0 and check all pairs (A[0], A[1]), (A[0], A[2]), …, (A[0], A[n-1]).
+
+Then fix i = 1 and check (A[1], A[2]), (A[1], A[3]), …, (A[1], A[n-1]).
+
+Continue this way until the last valid pair (A[n-2], A[n-1]).
+
+So the general sequence of checks is:
+
+(A[0], A[1]), (A[0], A[2]), …, (A[0], A[n-1])
+(A[1], A[2]), (A[1], A[3]), …, (A[1], A[n-1])
+...
+(A[n-2], A[n-1])
+
+
+This ensures all unique pairs are examined exactly once.
+
+Q2: Actions for Each Pair
+
+For each pair (A[i], A[j]) with i < j:
+
+Compute the sum: sum = A[i] + A[j].
+
+Compare sum with the target number x.
+
+If sum == x → report success:
+
+Print both indices i and j.
+
+Print their corresponding values A[i] and A[j].
+
+Print how many array items have been accessed so far.
+
+Stop searching immediately (exit program).
+
+If sum != x → continue checking the next pair.
+
+Each check involves two array accesses (A[i] and A[j]). The access counter must be incremented by 2 for every pair examined.
+
+Q3: Loops Before Nesting
+
+Before combining into nested loops, the sequence of checks can be written explicitly:
+
+For i = 0:
+
+for j = 1 to n-1
+    check (A[0], A[j])
+
+
+For i = 1:
+
+for j = 2 to n-1
+    check (A[1], A[j])
+
+
+For i = 2:
+
+for j = 3 to n-1
+    check (A[2], A[j])
+
+
+…
+
+For i = n-2:
+
+check (A[n-2], A[n-1])
+
+
+This shows the repeated structure before converting into a general nested loop.
+
+Q4: Nested Loop Version
+
+The above unrolled logic can be combined into a nested loop:
+
+for (int i = 0; i < n-1; i++) {
+    for (int j = i+1; j < n; j++) {
+        // access A[i] and A[j]
+        if (A[i] + A[j] == x) {
+            // success: print indices, values, and access count
+            // then terminate
+        }
+    }
+}
+
+
+Here:
+
+Outer loop selects the first index i.
+
+Inner loop iterates over all subsequent indices j.
+
+Together, they cover all unique pairs (i, j) with i < j.
+
+Q5: C++ Program (Brute-Force Implementation)
+// Dinesh Seveti
+// CSCI 201: Lab Assignment 8
+// Matching Sum Problem with Array Access Count
+
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#define MAXSIZE 1000
+using namespace std;
+
+int arr[MAXSIZE];
+int size = 0;
+
+void readFile() {
+    ifstream file("input.txt");
+    if (!file.is_open()) {
+        cerr << "Error opening input file!" << endl;
+        exit(1);
+    }
+
+    string word;
+    while (file >> word) {
+        stringstream obj(word);
+        int x;
+        obj >> x;
+        arr[size++] = x;
+    }
+    file.close();
+}
+
+int main() {
+    int target, accessCount = 0;
+
+    cout << "Please enter a number for which a matching sum is needed: ";
+    cin >> target;
+
+    readFile();
+
+    for (int i = 0; i < size; i++) {
+        for (int j = i+1; j < size; j++) {
+            accessCount += 2; // accessing arr[i] and arr[j]
+
+            if (arr[i] + arr[j] == target) {
+                cout << "Item " << i << " (value " << arr[i] << ") and "
+                     << "item " << j << " (value " << arr[j] << ") "
+                     << "add up to " << target << endl;
+                cout << accessCount << " array items were accessed" << endl;
+                return 0;
+            }
+        }
+    }
+
+    cout << "No matching sum was found." << endl;
+    cout << accessCount << " array items were accessed" << endl;
+
+    return 0;
+}
+
+Q6: No Match Case and Access Count
+
+If no pair adds up to the target number, then the program must check all possible pairs.
+
+Number of pairs in an array of size n:
+
+𝑛
+(
+𝑛
+−
+1
+)
+2
+2
+n(n−1)
+	​
+
+
+Array accesses per pair: 2 (one for A[i], one for A[j]).
+
+Total array accesses:
+
+2
+×
+𝑛
+(
+𝑛
+−
+1
+)
+2
+=
+𝑛
+(
+𝑛
+−
+1
+)
+2×
+2
+n(n−1)
+	​
+
+=n(n−1)
+
+Example:
+
+If n = 20, total pairs = 190.
+
+Total array accesses = 20 × 19 = 380.
+
+Thus, the access counter provides insight into the brute-force cost of the algorithm, which grows quadratically with the size of the array.
+
+✅ Summary
+
+Q1: Listed exact order of pairs.
+
+Q2: Described actions for each pair.
+
+Q3: Showed unrolled loop sequence.
+
+Q4: Converted to nested loop.
+
+Q5: Provided C++ implementation with access counter.
+
+Q6: Explained worst-case access count.
