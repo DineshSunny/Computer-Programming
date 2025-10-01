@@ -1,0 +1,34 @@
+Name: Dinesh Seveti
+Course: CSCI 201
+Lab 5 – Answers
+
+Q1: Counting spaces and stars
+Example: h = 7, t = 6, ch = '*'
+Line 1: gap1 = 0, dash1 = 6, gap2 = 12, dash2 = 6
+Line 2: gap1 = 1, dash1 = 6, gap2 = 10, dash2 = 6
+Line 3: gap1 = 2, dash1 = 6, gap2 = 8,  dash2 = 6
+...
+Line 7: 2*t = 12 stars
+(Repeat process for h = 9, t = 7)
+
+Q2: Patterns
+- gap1 increases by 1 each row.
+- dash1 and dash2 remain equal to thickness t.
+- gap2 decreases by 2 each row.
+- The final line has 2*t characters (bottom of Vee).
+
+Q3: Pseudocode
+read h, t, ch
+for i = 0 to h-2
+    gap1 = i
+    dash1 = t
+    gap2 = 2*(h-1-i)
+    dash2 = t
+    printChars(gap1, ' ')
+    printChars(dash1, ch)
+    printChars(gap2, ' ')
+    printChars(dash2, ch)
+    newline
+end for
+printChars(2*t, ch)   // bottom line
+newline

@@ -1,0 +1,15 @@
+Script started on 2025-10-01 00:26:06+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="219" LINES="18"]
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab5 [0;36m([1;31mmain[0;36m) [0m$ [7mg++ Lab5.cpp[27mg++ Lab5.cpp
+[?2004l[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab5 [0;36m([1;31mmain[0;36m) [0m$ [7m./a.out[27m./a.out
+[?2004lEnter height of Vee: 5
+Enter line thickness: 7
+Enter character: &
+&&&&&&&        &&&&&&&
+ &&&&&&&      &&&&&&&
+  &&&&&&&    &&&&&&&
+   &&&&&&&  &&&&&&&
+&&&&&&&&&&&&&&
+[?2004h[0;32m@DineshSunny [0m➜ [1;34m/workspaces/Computer-Programming/LabAssignments/Lab5 [0;36m([1;31mmain[0;36m) [0m$ [?2004l
+exit
+
+Script done on 2025-10-01 00:27:56+00:00 [COMMAND_EXIT_CODE="0"]
