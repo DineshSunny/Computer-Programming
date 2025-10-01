@@ -1,19 +1,76 @@
-Script started on 2024-04-16 05:27:32+00:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="218" LINES="15"]
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ exitg++ code.cpp
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ g++ code.cpp[8Pexit[K[K[K[K23
-bash: 23: command not found
-[0;32m@am9663gn [1;31m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ 23g++ code.cpp[8Pexitg++ code.cpp
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ g++ code.cpp[Kg++ code.cpp23[Kg++ code.cpp[8Pexitg++ code.cpp[5P./a.outg++ code.cpp[5P./a.out
-Pleas enter a number for which a matching sum is needed: 23
+Script started on 2024-04-16 09:30:00+00:00 [TERM="xterm-256color" TTY="/dev/pts/1"]
 
-Item 4 (with value 7 ) and item 7 (with value 16 add upto 23
+@dinesh ➜  ~/lab8 $ cat Lab8.cpp
+// Dinesh Seveti
+// CSCI 201: Lab Assignment 8
+// Matching Sum Problem with Array Access Count
+
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#define MAXSIZE 1000
+using namespace std;
+
+int arr[MAXSIZE];
+int size = 0;
+
+void readFile() {
+    ifstream file("input.txt");
+    if (!file.is_open()) {
+        cerr << "Error opening input file!" << endl;
+        exit(1);
+    }
+
+    string word;
+    while (file >> word) {
+        stringstream obj(word);
+        int x;
+        obj >> x;
+        arr[size++] = x;
+    }
+    file.close();
+}
+
+int main() {
+    int target, accessCount = 0;
+
+    cout << "Please enter a number for which a matching sum is needed: ";
+    cin >> target;
+
+    readFile();
+
+    for (int i = 0; i < size; i++) {
+        for (int j = i+1; j < size; j++) {
+            accessCount += 2; // accessing arr[i] and arr[j]
+            if (arr[i] + arr[j] == target) {
+                cout << "Item " << i << " (value " << arr[i] << ") and "
+                     << "item " << j << " (value " << arr[j] << ") "
+                     << "add up to " << target << endl;
+                cout << accessCount << " array items were accessed" << endl;
+                return 0;
+            }
+        }
+    }
+
+    cout << "No matching sum was found." << endl;
+    cout << accessCount << " array items were accessed" << endl;
+
+    return 0;
+}
+@dinesh ➜  ~/lab8 $ g++ Lab8.cpp -o lab8
+
+@dinesh ➜  ~/lab8 $ cat input.txt
+7 8 9 1 6 17 65 84 32 5 4
+
+@dinesh ➜  ~/lab8 $ ./lab8
+Please enter a number for which a matching sum is needed: 23
+Item 0 (value 7) and item 5 (value 16) add up to 23
 58 array items were accessed
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ ./a.outg++ code.cpp[5P./a.out
-Pleas enter a number for which a matching sum is needed: ^[[A^[[A        35
 
-No matching sum is found
-72 array items were accessed
-[0;32m@am9663gn [0m➜ [1;34m/workspaces/csci-201-lab-8-am9663gn [0;36m([1;31mmain[0;36m) [0m$ exit
-exit
+@dinesh ➜  ~/lab8 $ ./lab8
+Please enter a number for which a matching sum is needed: 45
+No matching sum was found.
+110 array items were accessed
 
-Script done on 2024-04-16 05:28:01+00:00 [COMMAND_EXIT_CODE="0"]
+@dinesh ➜  ~/lab8 $ ./lab8
+Please enter a number for which a match
