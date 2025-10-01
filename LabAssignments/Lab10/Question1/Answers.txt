@@ -1,0 +1,23 @@
+Question 1 (a)
+
+The class will have the following private data fields:
+
+int numerator
+
+int denominator
+
+
+Question 1 (b)
+
+The class will have the following public methods:
+
+Fraction();                            // default constructor  
+Fraction(int num, int denom);          // parameterized constructor  
+void read(std::istream& in);           // read fraction in a/b format  
+void write(std::ostream& out) const;   // write fraction in a/b format  
+int getNumerator() const;              // get numerator  
+int getDenominator() const;            // get denominator  
+void setNumerator(int num);            // set numerator  
+void setDenominator(int denom);        // set denominator  
+bool isEqual(const Fraction& other) const;  // check if fractions are equal  
+void simplify();                       // (extra credit) simplify fraction  

@@ -1,0 +1,135 @@
+@DineshSunny ➜ .../Computer-Programming/LabAssignments/Lab10/Question3 (main) $ ls
+Fraction.cpp  Fraction.h  main.cpp
+
+@DineshSunny ➜ .../Computer-Programming/LabAssignments/Lab10/Question3 (main) $ cat Fraction.h
+#ifndef FRACTION_H
+#define FRACTION_H
+
+#include <iostream>
+using namespace std;
+
+/**
+ * @class Fraction
+ * @brief A class to represent mathematical fractions in a/b format.
+ */
+class Fraction {
+private:
+    int numerator;    ///< The numerator of the fraction
+    int denominator;  ///< The denominator of the fraction
+
+    int gcd(int a, int b);   // helper for simplify
+
+public:
+    Fraction();
+    Fraction(int num, int denom);
+
+    void read(istream& in);
+    void write(ostream& out) const;
+
+    int getNumerator() const;
+    int getDenominator() const;
+    void setNumerator(int num);
+    void setDenominator(int denom);
+
+    bool isEqual(const Fraction& other) const;
+
+    void simplify();
+};
+
+#endif
+
+@DineshSunny ➜ .../Computer-Programming/LabAssignments/Lab10/Question3 (main) $ cat Fraction.cpp
+#include "Fraction.h"
+#include <stdexcept>
+
+Fraction::Fraction() : numerator(0), denominator(1) {}
+
+Fraction::Fraction(int num, int denom) {
+    if (denom == 0) throw runtime_error("Denominator cannot be zero.");
+    numerator = num;
+    denominator = denom;
+}
+
+void Fraction::read(istream& in) {
+    char slash;
+    in >> numerator >> slash >> denominator;
+    if (denominator == 0) throw runtime_error("Denominator cannot be zero.");
+}
+
+void Fraction::write(ostream& out) const {
+    out << numerator << "/" << denominator;
+}
+
+int Fraction::getNumerator() const { return numerator; }
+int Fraction::getDenominator() const { return denominator; }
+
+void Fraction::setNumerator(int num) { numerator = num; }
+void Fraction::setDenominator(int denom) {
+    if (denom == 0) throw runtime_error("Denominator cannot be zero.");
+    denominator = denom;
+}
+
+bool Fraction::isEqual(const Fraction& other) const {
+    return (numerator * other.denominator) == (other.numerator * denominator);
+}
+
+int Fraction::gcd(int a, int b) {
+    if (b == 0) return abs(a);
+    return gcd(b, a % b);
+}
+
+void Fraction::simplify() {
+    int divisor = gcd(numerator, denominator);
+    numerator /= divisor;
+    denominator /= divisor;
+    if (denominator < 0) {
+        denominator = -denominator;
+        numerator = -numerator;
+    }
+}
+
+@DineshSunny ➜ .../Computer-Programming/LabAssignments/Lab10/Question3 (main) $ cat main.cpp
+#include <iostream>
+#include "Fraction.h"
+using namespace std;
+
+int main() {
+    Fraction f1, f2;
+
+    cout << "Enter first fraction (a/b): ";
+    f1.read(cin);
+
+    cout << "Enter second fraction (a/b): ";
+    f2.read(cin);
+
+    cout << "You entered: ";
+    f1.write(cout); cout << " and ";
+    f2.write(cout); cout << endl;
+
+    if (f1.isEqual(f2)) {
+        cout << "The fractions are equal." << endl;
+    } else {
+        cout << "The fractions are not equal." << endl;
+    }
+
+    cout << "Simplifying fractions:" << endl;
+    f1.simplify();
+    f2.simplify();
+    cout << "Fraction 1 simplified = "; f1.write(cout); cout << endl;
+    cout << "Fraction 2 simplified = "; f2.write(cout); cout << endl;
+
+    return 0;
+}
+
+@DineshSunny ➜ .../Computer-Programming/LabAssignments/Lab10/Question3 (main) $ g++ -c Fraction.cpp
+@DineshSunny ➜ .../Computer-Programming/LabAssignments/Lab10/Question3 (main) $ g++ main.cpp Fraction.o -o main
+@DineshSunny ➜ .../Computer-Programming/LabAssignments/Lab10/Question3 (main) $ ./main
+Enter first fraction (a/b): 2/3
+Enter second fraction (a/b): 4/6
+You entered: 2/3 and 4/6
+The fractions are equal.
+Simplifying fractions:
+Fraction 1 simplified = 2/3
+Fraction 2 simplified = 2/3
+
+@DineshSunny ➜ .../Computer-Programming/LabAssignments/Lab10/Question3 (main) $ exit
