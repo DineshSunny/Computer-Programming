@@ -1,0 +1,13 @@
+Question 2 (Written Answer)
+
+Stack variables (i1, i2, x1, x2, etc.) are stored close together.
+
+Arrays (A[6], char c[11]) occupy contiguous stack memory.
+
+Objects (angle a1, a2) take more space, but still live on the stack.
+
+Pointers (ip1, fp1, etc.) are stack variables, but their values are addresses (pointing to stack or heap later).
+
+Heap allocations (see Q5/Q6) have addresses far from stack because stack and heap are managed in different memory regions.
+
+📌 Submission: Blank + filled memory map, plus above explanation.

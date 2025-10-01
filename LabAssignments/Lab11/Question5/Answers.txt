@@ -1,0 +1,15 @@
+Heap memory (allocated with new) has addresses far from stack variables.
+
+Example from angletest8.cpp:
+
+&i1 (stack) = 0x7ffee2a4
+new int (heap) = 0x600000e8
+
+
+Explanation:
+
+Stack grows downward in memory, close-packed.
+
+Heap grows upward, managed by memory allocator, usually high addresses.
+
+Therefore, stack and heap addresses are clearly separated.
