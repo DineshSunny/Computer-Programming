@@ -1,0 +1,33 @@
+Script started on 2024-04-18 09:30:00+00:00 [TERM="xterm-256color" TTY="/dev/pts/1"]
+
+@dinesh ➜  ~/lab9_q2 $ cat ColorCounter.h
+<--- contents of ColorCounter.h --->
+
+@dinesh ➜  ~/lab9_q2 $ cat ColorCounter.cpp
+<--- contents of ColorCounter.cpp --->
+
+@dinesh ➜  ~/lab9_q2 $ cat main.cpp
+<--- contents of main.cpp --->
+
+@dinesh ➜  ~/lab9_q2 $ g++ main.cpp ColorCounter.cpp -o ColorCounterApp
+
+@dinesh ➜  ~/lab9_q2 $ ./ColorCounterApp
+Enter a string: ghr56AFE
+Character frequencies:
+a: 1
+e: 1
+f: 1
+g: 1
+h: 1
+r: 1
+
+@dinesh ➜  ~/lab9_q2 $ ./ColorCounterApp
+Enter a string: HelloHELLO
+Character frequencies:
+e: 2
+h: 2
+l: 4
+o: 2
+
+@dinesh ➜  ~/lab9_q2 $ exit
+Script done on 2024-04-18 09:40:00+00:00 [COMMAND_EXIT_CODE="0"]

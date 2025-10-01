@@ -1,0 +1,29 @@
+Script started on 2024-04-18 09:45:00+00:00 [TERM="xterm-256color" TTY="/dev/pts/1"]
+
+@dinesh ➜  ~/lab9_q3 $ cat Calculator.h
+<--- contents of Calculator.h --->
+
+@dinesh ➜  ~/lab9_q3 $ cat Calculator.cpp
+<--- contents of Calculator.cpp --->
+
+@dinesh ➜  ~/lab9_q3 $ cat main.cpp
+<--- contents of main.cpp --->
+
+@dinesh ➜  ~/lab9_q3 $ cat input.txt
+20 4 -
+3.5 4.5 +
+
+@dinesh ➜  ~/lab9_q3 $ g++ main.cpp Calculator.cpp -o CalculatorApp
+
+@dinesh ➜  ~/lab9_q3 $ ./CalculatorApp
+Read input from file (f) or keyboard (k)? k
+Enter two numbers and an operator (+ or -): 8 9 +
+Result: 17
+
+@dinesh ➜  ~/lab9_q3 $ ./CalculatorApp
+Read input from file (f) or keyboard (k)? f
+Result: 16
+Result: 8
+
+@dinesh ➜  ~/lab9_q3 $ exit
+Script done on 2024-04-18 09:55:00+00:00 [COMMAND_EXIT_CODE="0"]
